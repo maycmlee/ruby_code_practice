@@ -11,18 +11,21 @@ def find_element(array, num)
   i = (i + steps) % array.length
 
   if array[i] == num
-    return i
+    return "Element found at index #{i}"
   else
-    return "No element in array."
+    return "Element not found."
   end
  
 end
 
 answer = find_element([4, 5, 1, 2, 3], 4)
-puts "Element found at index #{answer}"
+puts answer
 
 answer = find_element([3, 4, 5, 1, 2], 1)
-puts "Element found at index #{answer}"
+puts answer
 
 answer = find_element([2, 3, 4, 5, 1], 1)
-puts "Element found at index #{answer}"
+puts answer
+
+answer = find_element([2, 3, 4, 5, 1], 6)
+puts answer
