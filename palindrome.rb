@@ -20,6 +20,26 @@ def palindrome?(string)
   return true
 end
 
+# Recursive Solution
+# Run time...O(n/2)
+def recursive_palindrome(string, left = nil, right = nil)
+  if left == nil && right == nil
+    left = 0
+    right = string.length - 1
+  end
+
+  if left > right
+    return true
+  end
+  
+  if string[left] == string[right]
+    recursive_palindrome(string, left + 1, right - 1)
+  else
+    return false
+  end
+end
+
+
 
 
 # These are tests to check that your code is working. After writing
@@ -27,3 +47,7 @@ end
 puts('palindrome?("abc") == false: ' + (palindrome?('abc') == false).to_s)
 puts('palindrome?("abcba") == true: ' + (palindrome?('abcba') == true).to_s)
 puts('palindrome?("z") == true: ' + (palindrome?('z') == true).to_s)
+
+puts('recursive_palindrome("abc") == false: ' + (recursive_palindrome('abc') == false).to_s)
+puts('recursive_palindrome("abcba") == true: ' + (recursive_palindrome('abcba') == true).to_s)
+puts('recursive_palindrome("z") == true: ' + (recursive_palindrome('z') == true).to_s)
