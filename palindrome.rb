@@ -31,16 +31,13 @@ def recursive_palindrome(string, left = nil, right = nil)
   if left > right
     return true
   end
-  
+
   if string[left] == string[right]
     recursive_palindrome(string, left + 1, right - 1)
   else
     return false
   end
 end
-
-
-
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.
