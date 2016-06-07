@@ -17,7 +17,7 @@ attr_accessor :head
     @head = Node.new(data, nil)
   end
 
-  def add(new_data)
+  def insert(new_data)
     current = self.head
     while current.next_node != nil
       current = current.next_node
@@ -41,7 +41,7 @@ end
 
 ll = LinkedList.new("test0")
 puts "At index 0: #{ll.index_at(0)}"
-ll.add("test1")
+ll.insert("test1")
 puts "At index 1: #{ll.index_at(1)}"
-ll.add("test2")
+ll.insert("test2")
 puts "At index 2: #{ll.index_at(2)}"
