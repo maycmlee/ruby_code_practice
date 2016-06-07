@@ -34,7 +34,7 @@ attr_accessor :head
     if curr_node
       curr_node.data
     else
-      "this is nil"
+      nil
     end
   end
 end
