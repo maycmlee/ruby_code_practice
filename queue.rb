@@ -8,14 +8,20 @@ class Queue_mine
   end
 
   def dequeue()
-    element = @q[@head]
-    @head = (@head + 1) % @q.length
+    if @q[@head] == nil
+      return "Queue is empty"
+    else
+      element = @q[@head]
+      @q[@head] = nil
+      @head = (@head + 1) % @q.length
+      @count -= 1
+    end
     return element
   end
 
   def enqueue(element)
-    if @count > @q.length
-      "Need to increase size"
+    if @count >= @q.length
+      return "Need to increase size"
     else
       @q[@tail] = element
       @tail = (@tail + 1) % @q.length
@@ -29,6 +35,14 @@ q = Queue_mine.new(5)
 q.enqueue("test1")
 q.enqueue("test2")
 q.enqueue("test3")
+q.enqueue("test4")
+q.enqueue("test5")
+puts q.enqueue("test6")
+
 puts q.dequeue
 puts q.dequeue
 puts q.dequeue
+puts q.dequeue
+puts q.dequeue
+puts q.dequeue
+
