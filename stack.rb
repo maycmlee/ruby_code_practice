@@ -22,7 +22,6 @@ class Stack
   end
 
   def pop()
-
     if @count == 0
       return "Stack is empty. Nothing to pop."
     end
