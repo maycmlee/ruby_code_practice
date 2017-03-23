@@ -2,7 +2,14 @@
 # where all other elements appear twice one after another. 
 # Find that element in O(logn) complexity.
 
+# Used recursion
+
 def lonely_integer(array, low = 0, high = array.length - 1)
+
+if array.length == 0
+  puts "Empty arrray"
+  return
+end
 
   # Find middle of array
   midpt = (low + high) / 2
@@ -62,3 +69,4 @@ lonely_integer([0,0,3,5,5])
 lonely_integer([1,1,3,3,5])
 lonely_integer([5,5,11,11,33,33,55])
 lonely_integer([22, 22, 33, 44,44, 55,55])
+lonely_integer([])

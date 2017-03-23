@@ -45,4 +45,3 @@ puts q.dequeue
 puts q.dequeue
 puts q.dequeue
 puts q.dequeue
-

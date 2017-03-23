@@ -37,3 +37,6 @@ puts answer
 array = [0, 1, 2, 3, 4, 5]
 answer = magic_index(array)
 puts answer
+
+answer = magic_index([-3, -1, 1, 2, 4])
+puts answer
