@@ -33,6 +33,7 @@ def same_set_characters(array_of_words)
       index2 = index1 + 1
       while (index2 < array_of_words.length)
         if array_of_words[index2] != nil
+
           if array_of_words[index1].length < array_of_words[index2].length
             letters_hash = string_into_hash(array_of_words[index2])
             shorter_word = array_of_words[index1]
@@ -59,7 +60,6 @@ def same_set_characters(array_of_words)
     index1 += 1
   end
 end
-
 
 # Checks whether the letters of the word matches the letters 
 # in hash.
